@@ -1,0 +1,95 @@
+.flex-row {
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 2em;
+}
+
+.chart-conteiner {
+  padding: 2rem;
+  background-color: var(--clr-gray700);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-row.align-center {
+  justify-content: center;
+} 
+
+.chart-title {
+  padding-left: 1em;
+  border-left: 11px solid var(--clr-lightgreen300);
+  margin-bottom: 1rem;
+}
+
+.chart-title h4,
+.chart-title h6 {
+  color: var(--clr-lightgreen600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+.chart-title h4 {
+  font-weight: bold;
+}
+
+.chart-title h6 {
+  font-weight: medium;
+}
+
+.chart-conteiner canvas {
+  flex-basis: 100%;
+  height: 100%;
+  min-height: 200px;
+}
+
+.chart-info {
+  background-color: var(--clr-gray400);
+  padding: 1.25em;
+  flex-basis: 100%;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-info h5 {
+  font-weight: bold;
+  color: var(--clr-blue300);
+}
+
+.chart-info p {
+  font-weight: medium;
+  text-align: center;
+  color: var(--clr-lightgreen600);
+  font-size: 1.15rem;
+}
+
+
+@media (max-width: 990px) {
+  .container-fluid {
+    flex-direction: row-reverse;
+  }
+  .flex-row-2col {
+    flex-direction: column;  
+  }
+}
+
+@media (min-width: 990px) {
+  .chart-conteiner {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .chart-conteiner {
+    max-width: auto;
+    min-width: 45%;
+    height: auto;
+  }
+}

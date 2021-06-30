@@ -1,0 +1,17 @@
+.nav-link {
+  color: var(--clr-lightgreen300) !important;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link.active,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--clr-lightgreen300) !important;
+  border-bottom: 1px solid var(--clr-lightblue200);
+}
+
+@media (min-width: 990px) {
+  .navbar-brand {
+    margin-right: 2rem;
+  }
+}
