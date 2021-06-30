@@ -35,7 +35,7 @@ function init(e) {
 function renderTableContent() {
   const tableBody = document.querySelector("#table-sort tbody");
   tableBody.innerHTML = "";
-  corridas.forEach(corrida => {
+  getAll().forEach(corrida => {
     tableBody.appendChild(createTableRow(corrida));
   })
 }
@@ -54,9 +54,12 @@ function createTableRow(corrida) {
   });
 
   const tdAcoes = document.createElement("td");
-  const btnEditar = document.createElement("button");
+  const btnEditar = document.createElement("a");
+  btnEditar.classList.add("btn", "btn-light");
+  btnEditar.href="editar.html?id="+corrida.id;
   btnEditar.innerText = "Editar";
   const btnExcluir = document.createElement("button");
+  btnExcluir.classList.add("btn", "btn-light");
   btnExcluir.innerText = "Excluir";
 
   tdAcoes.appendChild(btnEditar);

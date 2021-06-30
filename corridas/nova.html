@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="../styles/corridas.css" />
-    <title>Health Track - Corridas</title>
+    <title>Health Track - Nova Corrida</title>
   </head>
   <body>
     <header>
@@ -81,6 +81,7 @@
     <main>
       <section>
         <div class="table-responsive">
+          <a id="link-voltar" class="link-light" href="/corridas/"><i class="fas fa-arrow-left"></i>Voltar</a>
           <table
             aria-label="Tabela para controle e inclusão de novas corridas"
             class="table table-striped table-bordered table-hover"
@@ -88,16 +89,24 @@
           >
             <thead>
               <tr>
-                <th class="sortable" id="id" scope="col">#</th>
-                <th class="sortable" id="date" scope="col">Data</th>
-                <th class="sortable" id="time" scope="col">Tempo</th>
-                <th class="sortable" id="distance" scope="col">Distância</th>
+                <th scope="col">Data</th>
+                <th scope="col">Tempo (min)</th>
+                <th scope="col">Distância (km)</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr>
+                <td><input type="date" name="date" id="date"></th>
+                <td><input type="number" min="0" step="0.5" name="time" id="time"></th>
+                <td><input type="number" min="0" step="0.5" name="dist" id="dist"></th>
+                <td>
+                  <button id="btn-add-corrida" class="btn btn-light"><i class="fas fa-check"></i></button>
+                  <a href="/corridas/" id="btn-undo-add-corrida" class="btn btn-light"><i class="fas fa-trash"></i></button>
+                </th>
+              </tr>
+            </tbody>
           </table>
-          <a class="btn btn-light" href="nova.html">Cadastrar Nova Corrida</a>
         </div>
       </section>
     </main>
@@ -111,6 +120,6 @@
     </script>
     <!-- js -->
     <script src="../javascript/corridas-db.js"></script>
-    <script src="../javascript/corridas.js"></script>
+    <script src="../javascript/novaCorrida.js"></script>
   </body>
 </html>

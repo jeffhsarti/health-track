@@ -9,15 +9,21 @@ section {
   width: 100%;
 }
 
-.navbar-light .navbar-toggler {
-  background-color: var(--clr-lightblue100);
-  border-color: var(--clr-lightblue200);
+.table-responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container-fluid {
-  padding: 0rem 2rem;
+.link-light {
+  color: var(--clr-lightgreen300);
+  place-self: flex-start;
+  margin-bottom: 1em;
 }
 
+.link-light .fa-arrow-left {
+  margin-right: 0.75em;
+}
 
 table {
   border-color: #0b0b0b !important;

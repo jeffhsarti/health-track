@@ -94,10 +94,12 @@ function generateChartPesoXTempo() {
 }
 
 function generateChartKMPercorridos() {
+  const distancias = getAll().map(corrida => corrida.distance);
+  const tempos = getAll().map(corrida => corrida.time);
   const datasets = [
     {
       label: "Distância (km)",
-      data: [1, 1.5, 2.5, 2.5, 2.75, 3.0],
+      data: distancias,
       borderWidth: 1,
       fill: true,
       backgroundColor: "#597ef00f",
@@ -105,7 +107,7 @@ function generateChartKMPercorridos() {
     },
     {
       label: "Tempo (min)",
-      data: [5, 7.8, 13.2, 13.4, 14.3, 15.2],
+      data: tempos,
       borderWidth: 1,
       fill: true,
       backgroundColor: "#00c2cb0f",

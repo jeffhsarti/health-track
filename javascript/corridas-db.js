@@ -1,4 +1,7 @@
 // Simulando um pequeno banco de dados para as corridas
+// As atualizações não persistem pois o arquivo sai e entra em memória 
+// toda vez que uma página é recarregada, mas já serve para utilizarmos
+// as funções básicas.
 const corridas = [
   {
     id: 1,
@@ -43,7 +46,7 @@ function getAll() {
 }
 
 function getById(id) {
-  const cIndex = corridas.findIndex((corrida) => corrida.id === id);
+  const cIndex = corridas.findIndex((corrida) => corrida.id === Number(id));
   if (cIndex > -1) {
     return corridas[cIndex];
   } else {
@@ -55,7 +58,6 @@ function update(corrida) {
   const currentCorridaIndex = corridas.findIndex((c) => c.id === corrida.id);
   if (currentCorridaIndex > -1) {
     corridas[currentCorridaIndex] = corrida;
-    renderTableContent();
     return corridas[currentCorridaIndex];
   } else {
     return null;
@@ -78,11 +80,10 @@ function create(corrida) {
   if (corrida.date && Number(corrida.time) >= 0 && Number(corrida.distance) >= 0) {
     const lastId = corridas[corridas.length - 1]?.id; 
     corrida.id = lastId === undefined ? 1 : lastId + 1;
-    corridas.push(proxId);
+    corridas.push(corrida);
     renderTableContent();
     return corrida;
   } else {
     return null;
   }
 }
-
