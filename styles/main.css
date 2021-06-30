@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --clr-lightgreen300: #0ee6b7;
+  --clr-lightgreen600: #11c29b;
+  --clr-darkgreen600: #177a65;
+  --clr-lightblue100: #5ce1e6;
+  --clr-lightblue200: #00c2cb;
+  --clr-blue300: #597ef0;
+  --clr-red100: #fa2828;
+  --clr-red300: #c91e18;
+  --clr-red600: #a50b05;
+  --clr-gray400: #545454;
+  --clr-gray700: #3f3f3f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-gray400);
+}
+
+header {
+  background-color: var(--clr-gray700);
+}
+
+.clr-cyan {
+  color: var(--clr-lightblue100);
+}
+
+.bg-cyan {
+  background-color: var(--clr-lightblue100);
+}

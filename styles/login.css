@@ -1,0 +1,120 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  position: relative;
+  align-items: center;
+}
+
+.login-form img {
+  width: 125px;
+  margin-bottom: 2rem;
+}
+
+.login-form form {
+  width: 100%;
+}
+
+#form-input-email,
+#form-input-senha {
+  border: 0;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+#form-input-email:focus,
+#form-input-senha:focus {
+  color: var(--clr-lightblue100);
+  border-bottom: 1px solid var(--clr-lightblue100);
+  box-shadow: unset;
+}
+
+#form-input-email.invalid,
+#form-input-senha.invalid {
+  border-bottom: 1px solid var(--clr-red600);
+  box-shadow: unset;
+}
+
+#form-input-email-help,
+#form-input-senha-help {
+  color: var(--clr-red300);
+  font-weight: 500;
+}
+
+main,
+footer {
+  margin: 2em auto;
+}
+
+footer {
+  margin: auto;
+}
+
+footer h5 {
+  text-align: center;
+}
+
+footer p {
+  display: none;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clr-cyan {
+  color: var(--clr-lightblue100);
+}
+
+.bg-cyan,
+#form-input-lembrar:checked {
+  background-color: var(--clr-lightblue100); 
+  border-color: var(--clr-lightblue100);
+}
+
+.bg-cyan:hover, 
+.bg-cyan:focus {
+  box-shadow: unset;
+  background-color: #5ce1e68c; 
+  border-color: #5ce1e68c;
+  color: white !important;
+}
+
+@media (min-width: 40em) {
+
+  body {
+    flex-direction: row;
+  }
+
+  body > * {
+    flex-basis: 100%;
+    padding: 1em;
+  }
+  
+  main {
+    border-right: 3px solid rgb(111 111 111 / 25%);
+    display: flex;
+    align-items: center;
+  }
+
+  .login-form {
+    margin: auto;
+  }
+
+  .login-form img {
+    margin-bottom: 5em;
+  }
+  
+  footer h5 {
+    margin-top: 6.75rem;
+  }
+  
+  footer p {
+    display: block;
+    margin-top: 2rem;
+    width: 90%;
+  }
+}
