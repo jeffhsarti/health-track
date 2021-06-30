@@ -1,0 +1,61 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  padding: 2rem;
+  width: 100%;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: var(--clr-lightblue100);
+  border-color: var(--clr-lightblue200);
+}
+
+.container-fluid {
+  padding: 0rem 2rem;
+}
+
+
+table {
+  border-color: #0b0b0b !important;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.fa-sort {
+  z-index: -1;
+}
+
+td, th {
+  text-align: center;
+}
+
+.table-striped > thead > tr {
+  color: var(--clr-lightgreen300);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0.2);
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  --bs-table-accent-bg: var(--clr-gray400);
+}
+
+.table-striped > tbody > tr:nth-of-type(even),
+.table-striped > tbody > tr:nth-of-type(odd) {
+  color: var(--clr-lightblue200);
+}
+
+tbody tr td:nth-child(1) {
+  font-weight: 700;
+}
+
+tbody tr td:nth-child(n+1) {
+  font-weight: 500;
+}
